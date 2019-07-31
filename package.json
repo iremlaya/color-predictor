@@ -4,42 +4,11 @@
     "@tensorflow/tfjs-node": "^1.2.1",
     "console-read-write": "^0.1.1",
     "esm": "^3.2.25",
-    "express": "^4.17.1",
     "get-pixels": "^3.3.2",
     "jsdom": "^15.1.1",
     "quantize": "^1.0.2"
   },
   "devDependencies": {
     "canvas": "^2.5.0"
-  },
-  "name": "rgb-to-color-prediction",
-  "description": "Takes an image and returns its most dominant color's predicted label.",
-  "version": "0.1.0",
-  "main": "color-finder.js",
-  "scripts": {
-    "test": "main('path to image').then((rgb) => {console.log(loadModal(rgb[0], rgb[1], rgb[2]))})"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iremlaya/ColorPredicter.git"
-  },
-  "keywords": [
-    "color",
-    "predicter",
-    "predictor",
-    "classifier",
-    "tensorflowjs",
-    "tfjs",
-    "rgb",
-    "color",
-    "classifier",
-    "color",
-    "predictor"
-  ],
-  "author": "iremlaya",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iremlaya/ColorPredicter/issues"
-  },
-  "homepage": "https://github.com/iremlaya/ColorPredicter#readme"
+  }
 }

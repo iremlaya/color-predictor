@@ -6,7 +6,7 @@ import loadModal from "./predict";
 
 global.Image = Canvas.Image;
 
-var path = "../../purple.jpg"
+var path = "../../blue.jpeg"
 
 function loadImg(img) {
     return new Promise((resolve, reject) => {
@@ -36,5 +36,5 @@ var predictColor = function (path) {
         })
 }
 
-predictColor(path)
-exports.predictColor
+//export default predictColor
+module.exports = predictColor
