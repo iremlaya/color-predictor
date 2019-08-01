@@ -1,5 +1,5 @@
 var tfnode = require("@tensorflow/tfjs-node");
-//var path = require("./path")
+
 let labelList = [
     'red-ish',
     'green-ish',
@@ -12,8 +12,9 @@ let labelList = [
     'grey-ish'
   ]
   
-var path = "./my-model/model.json"
+//var path = "./my-model/model.json"
 
+var path = "./node_modules/color-predictor/my-model/model.json"
 async function loadModel(r, g, b){
     const model = await tfnode.loadLayersModel(`file://${path}`);
     

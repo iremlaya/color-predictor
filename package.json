@@ -6,9 +6,39 @@
     "esm": "^3.2.25",
     "get-pixels": "^3.3.2",
     "jsdom": "^15.1.1",
-    "quantize": "^1.0.2"
+    "quantize": "^1.0.2",
+    "canvas": "^2.5.0"
   },
   "devDependencies": {
     "canvas": "^2.5.0"
-  }
+  },
+  "name": "color-predictor",
+  "description": "Takes a full path to an image and returns its predicted color.\r Will be integrated to work with live cam in order to detect colors of objects in real time.",
+  "version": "0.1.2",
+  "main": "color-finder.js",
+  "scripts": {
+    "test": "predictColor('path')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iremlaya/ColorPredictor.git"
+  },
+  "keywords": [
+    "color",
+    "predict",
+    "classifier",
+    "tfjs",
+    "tensorflow",
+    "javascript",
+    "esm",
+    "nodejs",
+    "deeplearning",
+    "color-classification"
+  ],
+  "author": "iremlaya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iremlaya/ColorPredictor/issues"
+  },
+  "homepage": "https://github.com/iremlaya/ColorPredictor#readme"
 }
