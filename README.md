@@ -28,7 +28,7 @@ in predict.js:
 
 or wherever your model.json is located.
 
-1) Downloading to same directory of your project
+##### Downloading to same directory of your project
 Download this repository to the same directory of your project either manually or with Git.
 Run `npm install`
 Example usage:
@@ -42,7 +42,7 @@ and run `node -r esm your-file-name.js`
 
 Since this project uses esm with node, you can either use `require` or `import`. Both works.
 
-2) Downloading to a seperate directory
+##### Downloading to a seperate directory
 
 Download this repository either manually or with Git.
 Copy and paste `package.json`to your working directory, or copy the dependencies inside `package.json` and add them to your own project's `package.json`.
@@ -60,5 +60,5 @@ Since this project uses esm with node, you can either use `require` or `import`.
 
 ### Note
 
-The path to the trained model is given as `var path = "./my-model/model.json"` in `predict.js`. If you would like to use another model, just require it.
+The path to the trained model is given in `predict.js`. If you would like to use another model, just require it.
 
