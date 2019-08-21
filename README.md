@@ -1,64 +1,57 @@
-# ColorPredictor
+[![npm version](https://badge.fury.io/js/color-predictor.svg)](https://www.npmjs.com/package/color-predictor)
+# Color Predictor
 Takes a full path to an image and returns its predicted color.
-Will be integrated to work with live cam in order to detect colors of objects in real time.
 This project uses Node.js with integrated ECMAScript. So it's essential to run your code with `node -r esm your-file-name.js`
 Or you can edit this project in a way there wouldn't be a need for esm. Your choice.
 
-## How To Use
-### As npm package
-Download with `npm install color-predictor` or `yarn add color-predictor`
-Request or import package and call `predictColor('path/to/img')`. Sample code:
+## Installing
+Install `color-predictor` (latest):
+```
+npm install color-predictor
+```
+or
+```
+yarn add color-predictor
+```
+## Usage
+Request or import package and call `predictColor('path/to/img')`. Sample code with `node.js`:
 ```
 var predictColor = require("color-predictor")
-var path = "../../purple.jpg"
-predictColor(path)
+var path = "../../purple.jpg" //full or relative path to your image
+var predictedColor = predictColor(path)
 ```
 Run your code with `node -r esm your-file-name.js`
-### As a seperate project
-#### IMPORTANT
-As I've adjusted the code for npm package, the path in the project where it calls for the model.json is different than if you had done npm install. Right now it is :
 
-in predict.js:
-`var path = "./node_modules/color-predictor/my-model/model.json"`
+### IMPORTANT
+#### Downloading as a local project
+To download dependencies, run
+```npm install```
+in the project.
 
-But if you are using this option, you should change this to :
+As I've adjusted the code for npm package, the path in the project where it calls for the model.json is different than if you had done npm install.
 
-in predict.js:
-`var path = "./my-model/model.json`
+##### predict.js:
+change the path variable to
+```var path = "path/to/color-predictor/my-model/model.json"```
 
 or wherever your model.json is located.
 
-##### Downloading to same directory of your project
-Download this repository to the same directory of your project either manually or with Git.
-Run `npm install`
-Example usage:
-```
-var predictColor = require("./color-finder")
+Example code:
 
-var path = "path/to/image.jpg"
-predictColor(path)
-```
-and run `node -r esm your-file-name.js`
-
-Since this project uses esm with node, you can either use `require` or `import`. Both works.
-
-##### Downloading to a seperate directory
-
-Download this repository either manually or with Git.
-Copy and paste `package.json`to your working directory, or copy the dependencies inside `package.json` and add them to your own project's `package.json`.
-Run `npm install`.
-Example usage:
 ```
 var predictColor = require("path/to/color-classification/color-finder")
 
 var path = "path/to/image.jpg"
 predictColor(path)
 ```
-and run `node -r esm {fileNameToBeRun.js}`
+Then run:
+```node -r esm your-file-name.js```
 
-Since this project uses esm with node, you can either use `require` or `import`. Both works.
 
 ### Note
 
 The path to the trained model is given in `predict.js`. If you would like to use another model, just require it.
+
+### Issues
+You're welcome to open new issues as you see fit. The first and foremost issue to be worked on is adding the feature of color detecting of objects with live cam in real time.
 
