@@ -10,8 +10,8 @@ var path = "../../blue.jpeg"
 
 function loadImg(img) {
     return new Promise((resolve, reject) => {
-        getPixels(img, function(err, data) {
-            if(err) {
+        getPixels(img, function (err, data) {
+            if (err) {
                 reject(err)
             } else {
                 resolve(data);
@@ -25,16 +25,18 @@ var main = async (path) => {
 
     const img = await loadImg(resolve(process.cwd(), path));
     const rgb = await new RGBFinder(img);
-   
+
     return rgb.dominantColor
 }
 
-var predictColor = function (path) {
+export var predictColorWithImg = function (path) {
     main(path).then((rgb) => {
-    
-        console.log(loadModal(rgb[0], rgb[1], rgb[2]))
-        })
+        return loadModal(rgb[0], rgb[1], rgb[2])
+    })
 }
 
-//export default predictColor
-module.exports = predictColor
+export var predictColorWithRGB = function (r, g, b) {
+
+    return loadModal(r, g, b);
+
+}
