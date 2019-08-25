@@ -7,18 +7,22 @@ Or you can edit this project in a way there wouldn't be a need for esm. Your cho
 ## Installing
 Install `color-predictor` (latest):
 ```
-npm install color-predictor
+yarn add color-predictor
 ```
 or
 ```
-yarn add color-predictor
+npm install color-predictor
 ```
 ## Usage
 Request or import package and call `predictColor('path/to/img')`. Sample code with `node.js`:
 ```
-var predictColor = require("color-predictor")
-var path = "../../purple.jpg" //full or relative path to your image
-var predictedColor = predictColor(path)
+import { predictColorWithRGB, predictColorWithImg} from "color-predictor";
+
+const r = 95, g = 173, b = 215;
+
+console.log(predictColorWithRGB(r, g, b));
+
+console.log(predictColorWithImg("./okey.png"));
 ```
 Run your code with `node -r esm your-file-name.js`
 
@@ -39,10 +43,10 @@ or wherever your model.json is located.
 Example code:
 
 ```
-var predictColor = require("path/to/color-classification/color-finder")
+const { predictColorWithImg } = require("path/to/color-classification/color-finder")
 
-var path = "path/to/image.jpg"
-predictColor(path)
+const path = "path/to/image.jpg"
+predictColorWithImg(path);
 ```
 Then run:
 ```node -r esm your-file-name.js```
