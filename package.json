@@ -5,7 +5,7 @@
     "console-read-write": "^0.1.1",
     "esm": "^3.2.25",
     "get-pixels": "^3.3.2",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "quantize": "^1.0.2",
     "canvas": "^2.5.0"
   },
